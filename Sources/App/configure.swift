@@ -22,7 +22,7 @@ public func configure(_ app: Application) async throws {
 //    
   
     
-    if var config = Environment.get("postgres://uf2i7tsv639tk0:pfe68b89e8855b9fea3eff36a981fcc9ce3d3d13612b300660fcda6ebde4c570a@c97r84s7psuajm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d65pihnonvik09").flatMap(URL.init).flatMap(PostgresConfiguration.init) { 
+    if var config = Environment.get("DATABASE_URL").flatMap(URL.init).flatMap(PostgresConfiguration.init) { 
         config.tlsConfiguration = .forClient( certificateVerification:.none)
         app.databases.use(.postgres(configuration: config), as: .psql)
     } else {
