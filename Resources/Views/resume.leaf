@@ -1,0 +1,172 @@
+#extend("person"):
+
+#export("resumeCv"):
+
+
+  <div class="section-title">
+    <h2>Resume</h2>
+    <p>Check My Resume</p>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <h3 class="resume-title">Sumary</h3>
+      <div class="resume-item pb-0">
+        <h4>Rami Alaidy</h4>
+        <p><em>innovative, deadline-driven full stack developer with Swift programming language. With 6+ years of experience in iOS app development specifically, building web APIs and web application (server-side Swift with Vapor), I have a great ability to integrate and get along well with my team. I have worked remotely for more than 5 years, continuing to learn what is new and always taking on challenges. This is my passion and this is what makes me proud of myself.</em></p>
+        <p>
+        <ul>
+          <li>Amman, Ibrahim Bakr St.House No. 55. Al-Bunyat Behind Petra
+              University</li>
+          <li>+962795838893</li>
+          <li>Ramialaidy.ra@gmail.com</li>
+        </ul>
+        </p>
+      </div>
+
+      <h3 class="resume-title">Education</h3>
+      
+      <div class="resume-item">
+        <h4>Bachelor of Finec CS - Computer Science</h4>
+        <h5>2012 - 2016</h5>
+        <p><em>The Hashemite University , Prince Hussein Bin Abdullah II College of Information Technology, Al-Zarqa, JO</em></p>
+      </div>
+     
+      <h3 class="resume-title"> Building Web APls and Web Apps in Swift</h3>
+      <div class="resume-item">
+      <h4> This is My Website built using Server-Side Swift With Vapor </h4>
+      <h5>2021 - Present</h5>
+      
+      <p>
+      <h6>Build the entire front-end and back-end from scratch</h6>
+      <h6>Build the front-end using </h6>
+      
+      <ul>
+      <li>Leaf :- Leaf is Vapor’s templating language. A templating language allows you to pass information to a page so it can generate the final HTML without knowing everything up front
+          This material may be protected by copyright.</li>
+      <li>HTML and CSS </li>
+      <li>Bootstrap</li>
+      <li>Java Script</li>
+      <li>PostagreSQL</li>
+      <li>Swift Language </li>
+      </ul>
+      </p>
+      <h4>About Vapor  </h4>
+      <p>
+      <ul>
+          <li>Vapor is an open-source web framework written in Swift. It’s built on top of Apple’s SwiftNIO library to provide a powerful, asynchronous framework. Vapor allows you to build back-end applications for iOS apps, front-end web sites and stand-alone server applications.
+              </li>
+          <li> Vapor consists of a number of packages including Leaf — a templating engine for front-end development — and Fluent, a Swift Object Relational Mapping (ORM) framework with native, asynchronous database drivers. One of its biggest strengths is its community.
+          </li>
+      </ul>
+      </p>
+      </div>
+      <div class="resume-item">
+        <h4>Infinty Touring & Shipping Company</h4>
+        
+        <h5>2023 - Present</h5>
+        <p><em> Building Web APls and Web Apps in Swift </em></p>
+        <p>
+        <ul>
+          <li> Build the entire front-end and back-end from scratch </li>
+          <li>Build the front-end using </li>
+          
+          <li>Leaf :- Leaf is Vapor’s templating language. A templating language allows you to pass information to a page so it can generate the final HTML without knowing everything up front
+              This material may be protected by copyright.</li>
+          <li>HTML and CSS</li>
+          <li>Bootstrap</li>
+          <li>Java Script</li>
+          <li>PostagreSQL</li>
+          <li>Swift Language </li>
+          
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h3 class="resume-title">Professional Experience</h3>
+      <div class="resume-item">
+        <h4>HighTik Company</h4>
+        <h5>2020 - Present</h5>
+        <p><em> Senior IOS Develope, Remotely </em></p>
+        <p>
+        <ul>
+          <li>Lead in programming and maintenance of the application from scratch and
+              responsible for its Code development to make it faster, maintainable and readable</li>
+          <li>Responsible for making the application stable and closing all bugs</li>
+          
+          <li>Work to support and make the application more flexible and easy to use and add new features that benefit that enhance the user experience to make it more powerful and flexible</li>
+          
+          <li> Provided technical leadership in a cross- functional team environment on large initiatives and ensured adherence to best practices within the organization </li>
+          
+          <li> Built reusable code libraries or components that can be leveraged across multiple projects to increase efficiency of future development efforts</li>
+          
+          <li>Collaborated with product managers to understand requirements and design solutions that meet business needs while considering technical constraints such as performance, scalability, security, et</li>
+          
+          <li>Direct contact with the customer, taking important notes, and repairing or developing them to provide good service</li>
+        </ul>
+        </p>
+      </div>
+      <div class="resume-item">
+        <h4>EqraTech Company</h4>
+        <h5>2017 - 2019</h5>
+        <p><em>IOS developer </em></p>
+        <p>
+        <ul>
+          <li>Developing and repairing some applications Like this :
+             1.Repair and upgrade the application (معلم)
+             2.Repair and upgrade the application (تسميع) </li>
+          <li>Fix bugs and develop a more efficient
+              version</li>
+          <li>Work with the team to check the app and work on fixing all the bugs</li>
+          <li>Solve the problems of the application to make it more reliable for the user so that he was suffering from technical problems</li>
+          <li> Create an application from scratch and (ضريبة الاراضي والأبنية) release a new update</li>
+          <li>  Create a new update version 2.0 Newly completed (النافذة لخدمات البلديات)
+              <li>Create a new application, upload and deliver a copy free of all errors and working properly</li>
+        </ul>
+        </p>
+      </div>
+      <div class="resume-item">
+        <h4>NS4IT Company</h4>
+        <h5>2016 - 2017</h5>
+        <p><em>Junior IOS developer </em></p>
+        <p>
+        <ul>
+          <li>Work on building and developing applications</li>
+          <li> Developed new features for iOS applications using Objective-C and Swift </li>
+          
+          <li>Developing and repairing some applications Like this :
+              Apps you worked on
+              مدارس الإبدع .1
+              مدارس المعالي .2 </li>
+       
+          <li> Collaborated with a team of Developers to Create innovative Solutions to complex Problems.</li>
+        </ul>
+        </p>
+      </div>
+      <h3 class="resume-title">FreeLancer</h3>
+
+      <div class="resume-item">
+        <h4>Freelancer App Create And Maintenanc</h4>
+        <h5>2017 - 2021</h5>
+        <p>
+        <ul>
+        <li>You set up the app from the beginning and develop(SayerRental)
+            This application you created for a Saudi company as a free programmer</li>
+        <li>You set up the app from the beginning and develop(Fekra4u)
+            This application you created as a free programmer E-Commerce shopping </li>
+        <li>Update and develop (E-Rent) </li>
+        <li> Update and develop(ذبائح الخير) With Create Firebase </li>
+        <li>(Mazadcom) Create App From A to Z  </li>
+        <li> Maintenance and develop ( Elite Car ) & Maintenance and develop ( Elite Car Iraq )</li>
+        <li>Maintenance and develop ( تاكسي مواكب ليبيا)</li>
+        <li> Maintenance & Fix Bugs and develop (Nice Time)</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+#endexport
+#endextend

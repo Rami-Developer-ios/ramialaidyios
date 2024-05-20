@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>#(title) | Personal Information</title>
+</head>
+
+<body>
+    #import("content")
+    
+    #if(authenticatedUser):
+      <a href="/users/#(user.id)/addProfilePicture">
+        #if(user.profilePicture):
+          Update
+        #else:
+          Add
+        #endif
+        Profile Picture
+      </a>
+    #endif”
+
+    Excerpt From
+    Server-Side Swift with Vapor
+    By Tim Condon
+    This material may be protected by copyright.
+</body>
+</html>
+

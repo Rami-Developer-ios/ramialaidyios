@@ -1,0 +1,53 @@
+#extend("main"):
+
+#export("content"):
+<h1>Personal Information</h1>
+
+#if(personalData):
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Birthdate</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+        <th>Adress</th>
+        <th>Marital Status</th>
+        <th>Email</th>
+        <th>Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      #for(data in personalData):
+        <tr>
+          <td>#(data.name)</td>
+          <td>#(data.birthdate)</td>
+          <td>#(data.gender)</td>
+          <td>#(data.nationality)</td>
+          <td>#(data.Adress)</td>
+          <td>#(data.marital_status)</td>
+          <td>#(data.email)</td>
+          <td>#(data.mobile)</td>
+        </tr>
+      #endfor
+    </tbody>
+  </table>
+#else:
+  <h2>There aren’t any Personal Information yet!</h2>
+#endif
+#endexport
+#endextend
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!---->
+<!--  <title>#(title) | Personal Information</title>-->
+<!--</head>-->
+<!---->
+<!--<body>-->
+  
+<!--  -->
+<!--</body>-->
+<!--</html>-->

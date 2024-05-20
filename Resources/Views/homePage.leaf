@@ -1,0 +1,36 @@
+#extend("person"):
+
+#export("home"):
+<div class="container">
+    <div>
+        <h6> Hi 👋 I'm,</h6>
+    </div>
+  <h1><a href="home">Rami Alaidy </a></h1>
+  <!-- Uncomment below if you prefer to use an image logo -->
+<!--       <a href="person.leaf" class="mr-auto"><img src="img/basenera.JPG" alt="" class="img-fluid"></a>-->
+  <h2>I'm a <span> Full Stack IOS Development </span> </h2>
+  <div>
+      <h4> I build <span>iOS Apps</span> , <span>Web APIs </span>  and <span>Web Apps</span> With Swift and Vapor </h4>
+  </div>
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a class="nav-link active" href="#header">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#resume">Resume</a></li>
+      <li><a class="nav-link" href="#services">Services</a></li>
+      <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav><!-- .navbar -->
+  <div class="social-links">
+    <a href="https://twitter.com/rami_alaidy" class="twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://web.facebook.com/rami.alaidy" class="facebook"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/rami_alaidy/" class="instagram"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/rami-alaidy" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <a href= "https://whatsapp.com/dl/+962795838893" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+</div>
+#endexport
+#endextend
