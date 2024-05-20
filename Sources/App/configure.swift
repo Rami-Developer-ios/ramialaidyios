@@ -19,18 +19,24 @@ public func configure(_ app: Application) async throws {
     let cors = CORSMiddleware(configuration: corsConfiguration)
     // cors middleware should come before default error middleware using `at: .beginning`
     app.middleware.use(cors, at: .beginning)
-    
-    app.databases.use(DatabaseConfigurationFactory.postgres(configuration: .init(
-        hostname: Environment.get("DATABASE_HOST") ?? "localhost",
-        port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ?? SQLPostgresConfiguration.ianaPortNumber,
-        username: Environment.get("DATABASE_USERNAME") ?? "postgres",
-        password: Environment.get("DATABASE_PASSWORD") ?? "r315r199r",
-        database: Environment.get("DATABASE_NAME") ?? "Protofolio",
-        tls: .prefer(try .init(configuration: .clientDefault)))
-    ), as: .psql)
-    
-//    try app.databases.use(.postgres(url: "postgres://gitxsqkf:SxZ9v5_Njw9xpdBbA2oZ2Nu0x35RWy3O@tai.db.elephantsql.com/gitxsqkf"), as: .psql)
 //    
+  
+    
+    if var config = Environment.get("postgres://uf2i7tsv639tk0:pfe68b89e8855b9fea3eff36a981fcc9ce3d3d13612b300660fcda6ebde4c570a@c97r84s7psuajm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d65pihnonvik09").flatMap(URL.init).flatMap(PostgresConfiguration.init) { 
+        config.tlsConfiguration = .forClient( certificateVerification:.none)
+        app.databases.use(.postgres(configuration: config), as: .psql)
+    } else {
+        app.databases.use(DatabaseConfigurationFactory.postgres(configuration: .init(
+            hostname: Environment.get("DATABASE_HOST") ?? "localhost",
+            port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ?? SQLPostgresConfiguration.ianaPortNumber,
+            username: Environment.get("DATABASE_USERNAME") ?? "postgres",
+            password: Environment.get("DATABASE_PASSWORD") ?? "r315r199r",
+            database: Environment.get("DATABASE_NAME") ?? "Protofolio",
+            tls: .prefer(try .init(configuration: .clientDefault)))
+        ), as: .psql)
+    }
+//    try app.databases.use(.postgres(url: ""), as: .psql)
+//
     app.migrations.add(CreatePersonInfo())
     
 //    app.migrations.add(CreatePerson())
