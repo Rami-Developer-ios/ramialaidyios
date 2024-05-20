@@ -8,7 +8,7 @@ import Vapor
 // configures your application
 public func configure(_ app: Application) async throws {
     // uncomment to serve files from /Public folder
-    app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
+    let file = try FileMiddleware(bundle: .main, publicDirectory: "Public")
     app.middleware.use(app.sessions.middleware)
     
     let corsConfiguration = CORSMiddleware.Configuration(
@@ -22,9 +22,15 @@ public func configure(_ app: Application) async throws {
 //    
   
     
-    if var config = Environment.get("DATABASE_URL").flatMap(URL.init).flatMap(PostgresConfiguration.init) { 
-        config.tlsConfiguration = .forClient( certificateVerification:.none)
-        app.databases.use(.postgres(configuration: config), as: .psql)
+  if let databaseURL = Environment.get("DATABASE_URL") {
+        var tlsConfig: TLSConfiguration = .makeClientConfiguration()
+        tlsConfig.certificateVerification = .none
+        let nioSSLContext = try NIOSSLContext(configuration: tlsConfig)
+
+        var postgresConfig = try SQLPostgresConfiguration(url: databaseURL)
+        postgresConfig.coreConfiguration.tls = .require(nioSSLContext)
+
+        app.databases.use(.postgres(configuration: postgresConfig), as: .psql)
     } else {
         app.databases.use(DatabaseConfigurationFactory.postgres(configuration: .init(
             hostname: Environment.get("DATABASE_HOST") ?? "localhost",

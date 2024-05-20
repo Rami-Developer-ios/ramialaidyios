@@ -128,7 +128,7 @@ struct WebsiteController: RouteCollection {
         do {
             userID = try user.requireID()
         } catch {
-            throw Abort(.noContent)
+            throw Abort(.notFound)
         }
         // 4
         let name = "portfolio-\(user.num ?? 0).jpg"
